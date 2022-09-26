@@ -2,14 +2,9 @@ package chapterOne;
 
 public class RotateMatrix {
 	public boolean rotateMatrix(int[][] mat) { // work by reference
-		if (mat.length == 0 || mat[0].length != mat.length) // mat is empty
+		if (mat.length == 0 || mat[0].length != mat.length) // mat is empty or not NxN
 			return false;
-		for (int i = 0; i < mat.length; i++) // check if mat is not NxN (need to iterate through each column)
-			for (int j = 0; j < mat[i].length; j++)
-				if (mat[i].length != mat.length) // check if column length == row length
-					return false;
 
-		// matrix is NxN
 		int n = mat.length;
 		// iterate through layers, by rotating we'll move first row to last column and
 		// so on
@@ -33,7 +28,7 @@ public class RotateMatrix {
 
 	public void printMat(int[][] mat) {
 		for (int i = 0; i < mat.length; i++) {
-			for (int j = 0; j < mat[i].length; j++)
+			for (int j = 0; j < mat[0].length; j++)
 				System.out.print(mat[i][j] + " ");
 			System.out.println();
 		}
