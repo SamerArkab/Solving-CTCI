@@ -37,7 +37,7 @@ public class SumLists {
 
 	// receive two numbers, each one as a REVERSED list
 	// (meaning 7->1->6 is the number 617)
-	// optimal runtime complexity would be O(n) and also for space, since we need to
+	// optimal runtime complexity would be O(n+m) and also for space, since we need to
 	// create a new node to return
 	// one way is to add them using the "long addition" method:
 	// 617 +
